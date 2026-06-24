@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Patient Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>CARECONNECT</h2>
+
+            <ul>
+                <li class="active">Dashboard</li>
+                <li>Appointments</li>
+                <li>Doctors</li>
+                <li>Prescriptions</li>
+                <li>Medical Records</li>
+                <li>Notifications</li>
+                <li>Profile</li>
+                <li id="logoutBtn">Logout</li>
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="welcome-section">
+                <h1>Welcome 👋</h1>
+                <p>Your healthcare information will appear here.</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Total Appointments</h3>
+                    <p id="appointmentCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Prescriptions</h3>
+                    <p id="prescriptionCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Notifications</h3>
+                    <p id="notificationCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Medical Records</h3>
+                    <p>Not Added</p>
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+            <section class="section">
+                <h2>Quick Actions</h2>
+
+                <div class="actions">
+
+                    <button id="bookAppointmentBtn">
+    Book Appointment
+</button>
+                    <button>View Doctors</button>
+                    <button>View Prescriptions</button>
+                    <button>Update Profile</button>
+
+                </div>
+            </section>
+
+            <!-- Upcoming Appointment -->
+            <section class="section">
+
+    <h2>Upcoming Appointment</h2>
+
+    <div
+        class="empty-box"
+        id="appointmentStatus">
+
+        Loading...
+
+    </div>
+
+</section>
+
+            <!-- Prescriptions -->
+            <section class="section">
+
+                <h2>Recent Prescriptions</h2>
+
+               <div
+    class="empty-box"
+    id="prescriptionBox">
+
+    Loading...
+
+</div>
+
+            </section>
+
+            <!-- Medical Records -->
+            <section class="section">
+
+                <h2>Medical Records</h2>
+
+               <div
+    class="empty-box"
+    id="medicalHistoryBox">
+
+    Loading...
+
+</div>
+
+            </section>
+
+            <!-- Emergency Contact -->
+            <section class="section">
+
+                <h2>Emergency Contact</h2>
+
+                <div class="empty-box">
+                    No emergency contact added.
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/patient-dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Doctor | CareConnect</title>
+
+<link rel="stylesheet" href="../css/editdoctor.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+<div class="card">
+
+    <h1>✏️ Edit Doctor</h1>
+
+    <form id="editDoctorForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Doctor Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            required
+        >
+
+        <input
+            type="text"
+            id="phone"
+            placeholder="Phone Number"
+            required
+        >
+
+        <input
+            type="text"
+            id="specialization"
+            placeholder="Specialization"
+            required
+        >
+
+        <button type="submit">
+            Update Doctor
+        </button>
+
+    </form>
+
+    <button
+        class="back-btn"
+        onclick="window.location.href='view-doctors.html'">
+
+        ← Back
+
+    </button>
+
+</div>
+
+
+</div>
+
+<script src="../js/editDoctor.js"></script>
+
+</body>
+</html>

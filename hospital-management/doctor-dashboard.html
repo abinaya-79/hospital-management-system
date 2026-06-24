@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CareConnect - Doctor Dashboard</title>
+
+<link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+<body>
+
+<div class="container">
+
+
+<aside class="sidebar">
+
+    <h2>CARECONNECT</h2>
+
+    <ul>
+
+        <li class="active">Dashboard</li>
+
+        <li onclick="window.location.href='doctor-appointments.html'">
+            Appointments
+        </li>
+
+        <li onclick="window.location.href='viewpatients.html'">
+            Patients
+        </li>
+
+        <li onclick="window.location.href='manage-availability.html'">
+            Availability
+        </li>
+
+        <li onclick="window.location.href='doctor-profile.html'">
+            Profile
+        </li>
+
+        <li id="logoutBtn">
+            Logout
+        </li>
+
+    </ul>
+
+</aside>
+
+<main class="main-content">
+
+    <div class="welcome-card">
+
+        <h1 id="doctorWelcome">
+            Welcome Doctor 👋
+        </h1>
+
+        <p id="dailyMessage">
+            Loading...
+        </p>
+
+    </div>
+
+    <div class="doctor-card">
+
+        <h2>💙 CareConnect Doctor Portal</h2>
+
+        <p>
+            Thank you for being part of CareConnect.
+            Your dedication helps patients receive better healthcare every day.
+        </p>
+
+        <ul>
+
+            <li>✔ Manage Appointments</li>
+
+            <li>✔ View Patient Records</li>
+
+            <li>✔ Update Availability</li>
+
+            <li>✔ Maintain Patient History</li>
+
+        </ul>
+
+    </div>
+
+
+
+</div>
+
+<script src="../js/doctor-dashboard.js"></script>
+
+</body>
+</html>

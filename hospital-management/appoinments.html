@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment</title>
+
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>CARECONNECT</h2>
+
+        <ul>
+            <li onclick="location.href='patient-dashboard.html'">Dashboard</li>
+            <li class="active">Appointments</li>
+            <li>Doctors</li>
+            <li>Prescriptions</li>
+            <li>Profile</li>
+            <li id="logoutBtn">Logout</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="welcome-section">
+            <h1>Book Appointment</h1>
+            <p>Schedule a consultation with a doctor.</p>
+        </div>
+
+        <div class="appointment-form">
+
+            <form id="appointmentForm">
+
+                <label>Specialization</label>
+
+                <select required>
+                    <option value="">Select Specialization</option>
+                    <option>Cardiology</option>
+                    <option>Neurology</option>
+                    <option>Dermatology</option>
+                    <option>Orthopedics</option>
+                    <option>Pediatrics</option>
+                </select>
+
+                <label>Doctor</label>
+
+                <select required>
+                    <option value="">Select Doctor</option>
+                </select>
+
+                <label>Appointment Date</label>
+
+                <input type="date" required>
+
+                <label>Time Slot</label>
+
+                <input type="time" required>
+
+                <label>Symptoms / Reason For Visit</label>
+
+                <textarea
+                    rows="5"
+                    placeholder="Describe your symptoms..."
+                    required>
+                </textarea>
+
+                <button type="submit">
+                    Book Appointment
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/appointments.js"></script>
+
+</body>
+</html>

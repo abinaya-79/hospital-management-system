@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Doctor | CareConnect</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a,
+        #2563eb
+    );
+}
+
+.container{
+
+    width:100%;
+    max-width:600px;
+    padding:20px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+
+    color:white;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#dbeafe;
+
+}
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+input:focus{
+
+    box-shadow:0 0 10px #60a5fa;
+
+}
+
+.btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#2563eb;
+
+    transition:0.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.back-btn{
+
+    margin-top:15px;
+
+    background:transparent;
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.back-btn:hover{
+
+    background:white;
+
+    color:#2563eb;
+
+}
+
+.header-icon{
+
+    text-align:center;
+
+    font-size:55px;
+
+    margin-bottom:10px;
+
+}
+
+.success{
+
+    text-align:center;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="header-icon">👨‍⚕️</div>
+
+        <h1 class="logo">
+            CARECONNECT
+        </h1>
+
+        <p class="subtitle">
+            Add New Doctor To Hospital System
+        </p>
+
+        <form id="doctorForm">
+
+            <div class="form-group">
+                <label>Doctor Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Doctor Name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Enter Phone Number"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Specialization</label>
+                <input
+                    type="text"
+                    id="specialization"
+                    placeholder="Cardiology, Neurology..."
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create Password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn">
+                Add Doctor
+            </button>
+
+            <button
+                type="button"
+                class="btn back-btn"
+                onclick="window.location.href='admin-dashboard.html'"
+            >
+                Back To Dashboard
+            </button>
+
+            <div id="message" class="success"></div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="../js/addDoctor.js"></script>
+
+</body>
+</html>

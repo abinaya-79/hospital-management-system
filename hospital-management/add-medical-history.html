@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Medical History</title>
+
+    <link rel="stylesheet" href="../css/add-medical-history.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Add Medical History</h1>
+
+        <form id="medicalHistoryForm">
+
+            <input
+                type="text"
+                id="patientName"
+                placeholder="Patient Name"
+                required>
+
+            <textarea
+                id="visitReason"
+                placeholder="Visit Reason"
+                required></textarea>
+
+            <textarea
+                id="diagnosis"
+                placeholder="Diagnosis"
+                required></textarea>
+
+            <textarea
+                id="prescription"
+                placeholder="Prescription"
+                required></textarea>
+
+            <button type="submit">
+
+                Save Record
+
+            </button>
+
+        </form>
+
+        <button
+            class="back-btn"
+            onclick="window.location.href='doctor-dashboard.html'">
+
+            Back
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/addMedicalHistory.js"></script>
+
+</body>
+</html>

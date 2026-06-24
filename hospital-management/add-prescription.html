@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Prescription | CareConnect</title>
+
+    <link rel="stylesheet" href="../css/add-prescription.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Add Prescription</h1>
+
+        <form id="prescriptionForm">
+
+            <div class="input-group">
+
+                <label>Patient Name</label>
+
+                <input
+    type="text"
+    id="patientName"
+    readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Diagnosis</label>
+
+                <textarea
+                    id="diagnosis"
+                    placeholder="Enter diagnosis"
+                    required></textarea>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Medicines</label>
+
+                <textarea
+                    id="medicines"
+                    placeholder="Enter medicines"
+                    required></textarea>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Notes</label>
+
+                <textarea
+                    id="notes"
+                    placeholder="Additional notes"></textarea>
+
+            </div>
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Save Prescription
+
+            </button>
+
+        </form>
+
+        <button
+            class="back-btn"
+            onclick="window.location.href='doctor-dashboard.html'">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/addPrescription.js"></script>
+
+</body>
+</html>

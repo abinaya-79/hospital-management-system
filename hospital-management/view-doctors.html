@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Doctors | CareConnect</title>
+<link rel="stylesheet" href="../css/viewdoctors.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>👨‍⚕️ Doctor Management</h1>
+
+        <p>View, Edit and Remove Doctors</p>
+
+    </div>
+
+    <div class="table-card">
+
+        <div class="top-bar">
+
+            <h2>Doctors List</h2>
+
+            <button
+                class="add-btn"
+                onclick="window.location.href='add-doctor.html'">
+
+                + Add Doctor
+
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+                    <th>Specialization</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="doctorTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <button
+        class="back-btn"
+        onclick="window.location.href='admin-dashboard.html'">
+
+        ← Back To Dashboard
+
+    </button>
+
+</div>
+
+<script src="../js/viewDoctors.js"></script>
+
+</body>
+
+</html>

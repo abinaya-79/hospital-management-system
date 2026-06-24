@@ -1,0 +1,107 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#f1f5f9;
+}
+
+.container{
+display:flex;
+min-height:100vh;
+}
+
+.sidebar{
+width:250px;
+background:#1e293b;
+color:white;
+padding:25px;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:15px;
+margin-bottom:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.sidebar li:hover,
+.sidebar li.active{
+background:#2563eb;
+}
+
+.main-content{
+flex:1;
+padding:30px;
+}
+
+.welcome-card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.welcome-card h1{
+color:#1e293b;
+margin-bottom:15px;
+}
+
+.welcome-card p{
+color:#64748b;
+font-size:18px;
+}
+
+.doctor-card{
+background:white;
+padding:30px;
+border-radius:15px;
+margin-top:25px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.doctor-card h2{
+color:#2563eb;
+margin-bottom:15px;
+}
+
+.doctor-card p{
+color:#555;
+line-height:1.7;
+margin-bottom:15px;
+}
+
+.doctor-card ul{
+list-style:none;
+}
+
+.doctor-card li{
+padding:10px 0;
+color:#333;
+}
+
+@media(max-width:768px){
+
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+}
+
+
+}
