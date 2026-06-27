@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Patient Management</title>
+
+<link rel="stylesheet"
+href="../css/patient-management.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>CARECONNECT</h2>
+
+        <ul>
+
+            <li onclick="window.location.href='admin-dashboard.html'">
+                Dashboard
+            </li>
+
+            <li onclick="window.location.href='doctor-management.html'">
+                Doctors
+            </li>
+
+            <li class="active">
+                Patients
+            </li>
+
+            <li onclick="window.location.href='admin-appointments.html'">
+                Appointments
+            </li>
+
+            <li id="logoutBtn">
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <div class="top-bar">
+
+            <div>
+
+                <h1>Patient Management</h1>
+
+                <p>
+                    View and manage all registered patients.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Age</th>
+
+                        <th>Gender</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="patientTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/patient-management.js"></script>
+
+</body>
+
+</html>

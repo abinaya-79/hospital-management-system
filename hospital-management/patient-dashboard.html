@@ -4,140 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareConnect - Patient Dashboard</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet" href="../css/patient-dashboard.css">
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
+    <!-- Sidebar -->
 
-            <h2>CARECONNECT</h2>
+    <aside class="sidebar">
 
-            <ul>
-                <li class="active">Dashboard</li>
-                <li>Appointments</li>
-                <li>Doctors</li>
-                <li>Prescriptions</li>
-                <li>Medical Records</li>
-                <li>Notifications</li>
-                <li>Profile</li>
-                <li id="logoutBtn">Logout</li>
-            </ul>
+        <h2>CARECONNECT</h2>
 
-        </aside>
+        <ul>
 
-        <!-- Main Content -->
-        <main class="main-content">
+            <li class="active">
+                Dashboard
+            </li>
 
-            <div class="welcome-section">
-                <h1>Welcome 👋</h1>
-                <p>Your healthcare information will appear here.</p>
-            </div>
+            <li onclick="window.location.href='book-appointment.html'">
+                Book Appointment
+            </li>
 
-            <!-- Stats Cards -->
-            <div class="cards">
+            <li onclick="window.location.href='view-doctors.html'">
+                Doctors
+            </li>
 
-                <div class="card">
-                    <h3>Total Appointments</h3>
-                    <p id="appointmentCount">0</p>
-                </div>
+            <li onclick="window.location.href='my-appointments.html'">
+                My Appointments
+            </li>
 
-                <div class="card">
-                    <h3>Prescriptions</h3>
-                    <p id="prescriptionCount">0</p>
-                </div>
+            <li onclick="window.location.href='patient-prescriptions.html'">
+                Prescriptions
+            </li>
 
-                <div class="card">
-                    <h3>Notifications</h3>
-                    <p id="notificationCount">0</p>
-                </div>
+            <li onclick="window.location.href='patient-medical-history.html'">
+                Medical History
+            </li>
 
-                <div class="card">
-                    <h3>Medical Records</h3>
-                    <p>Not Added</p>
-                </div>
+            <li onclick="window.location.href='patient-profile.html'">
+                Profile
+            </li>
 
-            </div>
+            <li id="logoutBtn">
+                Logout
+            </li>
 
-            <!-- Quick Actions -->
-            <section class="section">
-                <h2>Quick Actions</h2>
+        </ul>
 
-                <div class="actions">
+    </aside>
 
-                    <button id="bookAppointmentBtn">
-    Book Appointment
-</button>
-                    <button>View Doctors</button>
-                    <button>View Prescriptions</button>
-                    <button>Update Profile</button>
+    <!-- Main Content -->
 
-                </div>
-            </section>
+    <main class="main-content">
 
-            <!-- Upcoming Appointment -->
-            <section class="section">
+        <div class="welcome-section">
 
-    <h2>Upcoming Appointment</h2>
+            <h1 id="patientWelcome">
+                Welcome 👋
+            </h1>
 
-    <div
-        class="empty-box"
-        id="appointmentStatus">
+            <p>
+                Manage your healthcare services using the sidebar.
+            </p>
 
-        Loading...
+        </div>
 
-    </div>
+        <div class="message-card">
 
-</section>
+            <h2>
+                💙 Patient Corner
+            </h2>
 
-            <!-- Prescriptions -->
-            <section class="section">
+            <p id="dailyMessage"></p>
 
-                <h2>Recent Prescriptions</h2>
+        </div>
 
-               <div
-    class="empty-box"
-    id="prescriptionBox">
-
-    Loading...
+    </main>
 
 </div>
 
-            </section>
-
-            <!-- Medical Records -->
-            <section class="section">
-
-                <h2>Medical Records</h2>
-
-               <div
-    class="empty-box"
-    id="medicalHistoryBox">
-
-    Loading...
-
-</div>
-
-            </section>
-
-            <!-- Emergency Contact -->
-            <section class="section">
-
-                <h2>Emergency Contact</h2>
-
-                <div class="empty-box">
-                    No emergency contact added.
-                </div>
-
-            </section>
-
-        </main>
-
-    </div>
-
-    <script src="../js/patient-dashboard.js"></script>
+<script src="../js/patient-dashboard.js"></script>
 
 </body>
 </html>

@@ -105,6 +105,33 @@ await fetch(
 );
         if(data.success){
 
+            const appointment =
+                    JSON.parse(
+        localStorage.getItem(
+"appointmentData"
+)
+);
+
+await fetch(
+
+`http://localhost:5000/api/auth/appointments/${appointment.id}`,
+
+{
+    method:"PUT",
+
+    headers:{
+        "Content-Type":"application/json"
+    },
+
+    body:JSON.stringify({
+
+        consulted:true
+
+    })
+
+}
+
+);
             window.location.href =
             "doctor-dashboard.html";
 

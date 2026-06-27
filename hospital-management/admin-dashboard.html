@@ -1,176 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareConnect Admin Dashboard</title>
 
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>CareConnect - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+
 </head>
+
 <body>
 
 <div class="container">
 
     <!-- Sidebar -->
+
     <aside class="sidebar">
 
         <h2>CARECONNECT</h2>
 
         <ul>
-            <li class="active">Dashboard</li>
-            <li>Doctors</li>
-            <li>Patients</li>
-            <li>Appointments</li>
-            <li>Analytics</li>
-            <li>Settings</li>
-            <li id="logoutBtn">Logout</li>
+
+            <li class="active">
+                Dashboard
+            </li>
+
+            <li onclick="window.location.href='doctor-management.html'">
+                Doctors
+            </li>
+
+            <li onclick="window.location.href='patient-management.html'">
+                Patients
+            </li>
+
+            <li onclick="window.location.href='admin-appointments.html'">
+                Appointments
+            </li>
+
+            <li id="logoutBtn">
+                Logout
+            </li>
+
         </ul>
 
     </aside>
 
     <!-- Main Content -->
+
     <main class="main-content">
 
-        <div class="welcome-section">
-            <h1>Welcome Admin 👋</h1>
-            <p>Manage the entire hospital ecosystem from one place.</p>
+        <!-- Welcome Card -->
+
+        <div class="welcome-card">
+
+            <h1 id="adminWelcome">
+                Welcome Admin 👋
+            </h1>
+
+            <p>
+                Manage doctors, patients and appointments efficiently from one place.
+            </p>
+
         </div>
 
         <!-- Statistics -->
+
         <div class="cards">
 
             <div class="card">
+
                 <h3>Total Doctors</h3>
-                <p>0</p>
+
+                <h2 id="doctorCount">
+                    0
+                </h2>
+
             </div>
 
             <div class="card">
+
                 <h3>Total Patients</h3>
-                <p>0</p>
+
+                <h2 id="patientCount">
+                    0
+                </h2>
+
             </div>
 
             <div class="card">
+
                 <h3>Total Appointments</h3>
-                <p>0</p>
+
+                <h2 id="appointmentCount">
+                    0
+                </h2>
+
             </div>
 
             <div class="card">
-                <h3>Completed Appointments</h3>
-                <p>0</p>
+
+                <h3>Pending Appointments</h3>
+
+                <h2 id="pendingCount">
+                    0
+                </h2>
+
             </div>
 
         </div>
 
-        <!-- Doctor Management -->
-        <section class="section">
+        <!-- Admin Message -->
 
-            <h2>Doctor Management</h2>
+        <div class="message-card">
 
-            <div class="actions">
+            <h2>🏥 Admin Message</h2>
 
-                <button id="addDoctorBtn">
-                    Add Doctor
-                </button>
+            <p id="adminMessage">
+                Loading...
+            </p>
 
-                <button id="viewDoctorsBtn">
-                    View Doctors
-                </button>
-
-                <button id="editDoctorBtn">
-                    Edit Doctor
-                </button>
-
-                <button id="removeDoctorBtn">
-                    Remove Doctor
-                </button>
-
-            </div>
-
-        </section>
-
-        <!-- Patient Management -->
-        <section class="section">
-
-            <h2>Patient Management</h2>
-
-            <div class="actions">
-            <button id="viewAppointmentsBtn">
-                View Appointments
-            </button>
-                <button id="viewPatientsBtn">
-                    View Patients
-                </button>
-
-                <button id="medicalHistoryBtn">
-                    Medical History
-                </button>
-
-                <button id="prescriptionsBtn">
-                    Prescriptions
-                </button>
-
-                <button id="reportsBtn">
-                    Reports
-                </button>
-
-            </div>
-
-        </section>
-
-        <!-- Patient Activity Timeline -->
-        <section class="section">
-
-            <h2>Patient Activity Timeline</h2>
-
-            <div class="empty-box">
-
-                No activity records available.
-
-                <br><br>
-
-                Example Timeline:
-
-                <hr><br>
-
-                10 Jan 2026 - Appointment Booked <br><br>
-
-                10 Jan 2026 - Doctor Accepted Appointment <br><br>
-
-                11 Jan 2026 - Consultation Completed <br><br>
-
-                11 Jan 2026 - Prescription Added
-
-            </div>
-
-        </section>
-
-        <!-- Appointment Monitoring -->
-        <section class="section">
-
-            <h2>Appointment Monitoring</h2>
-
-            <div class="empty-box">
-                No appointments available.
-            </div>
-
-        </section>
-
-        <!-- Analytics -->
-        <section class="section">
-
-            <h2>Analytics</h2>
-
-            <div class="empty-box">
-                Analytics will appear here when patient and doctor data becomes available.
-            </div>
-
-        </section>
+        </div>
 
     </main>
 
 </div>
 
-<script src="../js/dashboard.js"></script>
+<script src="../js/admin-dashboard.js"></script>
 
 </body>
+
 </html>

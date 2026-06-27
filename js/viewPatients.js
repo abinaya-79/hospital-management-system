@@ -26,23 +26,15 @@ patients.forEach(patient => {
 
         <td>
 
-            <button
-                class="edit-btn"
-                onclick="editPatient('${patient.id}')">
+    <button
+        class="history-btn"
+        onclick="viewHistory('${patient.name}')">
 
-                Edit
+        View History
 
-            </button>
+    </button>
 
-            <button
-                class="delete-btn"
-                onclick="deletePatient('${patient.id}')">
-
-                Delete
-
-            </button>
-
-        </td>
+</td>
 
     </tr>
 
@@ -88,5 +80,16 @@ alert(result.message);
 
 location.reload();
 
+
+}
+function viewHistory(patientName){
+
+    localStorage.setItem(
+        "selectedPatient",
+        patientName
+    );
+
+    window.location.href =
+    "patient-history.html";
 
 }

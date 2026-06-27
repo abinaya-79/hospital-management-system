@@ -315,7 +315,6 @@ try {
 
 router.put("/patients/:id", async (req, res) => {
 
-
 try {
 
     const { id } = req.params;
@@ -325,7 +324,11 @@ try {
         email,
         phone,
         age,
-        gender
+        gender,
+        profession,
+        height,
+        weight,
+        blood_group
     } = req.body;
 
     const { error } = await supabase
@@ -335,7 +338,11 @@ try {
             email,
             phone,
             age,
-            gender
+            gender,
+            profession,
+            height,
+            weight,
+            blood_group
         })
         .eq("id", id);
 
@@ -362,9 +369,7 @@ try {
 
 }
 
-
 });
-
 
 
 
@@ -495,14 +500,27 @@ router.get("/appointments", async (req, res) => {
 
 router.put("/appointments/:id", async (req, res) => {
 
-    try {
+    try{
 
         const { id } = req.params;
-        const { status } = req.body;
+
+        const updateData = {};
+
+        if(req.body.status !== undefined){
+
+            updateData.status = req.body.status;
+
+        }
+
+        if(req.body.consulted !== undefined){
+
+            updateData.consulted = req.body.consulted;
+
+        }
 
         const { error } = await supabase
         .from("appointments")
-        .update({ status })
+        .update(updateData)
         .eq("id", id);
 
         if(error){
@@ -516,45 +534,7 @@ router.put("/appointments/:id", async (req, res) => {
 
         res.json({
             success:true,
-            message:"Status Updated"
-        });
-
-    }
-
-    catch(err){
-
-        res.status(500).json({
-            success:false,
-            message:err.message
-        });
-
-    }
-
-});
-
-router.delete("/appointments/:id", async (req, res) => {
-
-    try {
-
-        const { id } = req.params;
-
-        const { error } = await supabase
-        .from("appointments")
-        .delete()
-        .eq("id", id);
-
-        if(error){
-
-            return res.status(400).json({
-                success:false,
-                message:error.message
-            });
-
-        }
-
-        res.json({
-            success:true,
-            message:"Appointment Deleted"
+            message:"Appointment Updated Successfully"
         });
 
     }
@@ -869,47 +849,6 @@ router.put("/doctor/:id", async (req,res)=>{
 
 });
 
-
-router.put("/doctor/:id", async (req,res)=>{
-
-    const { id } = req.params;
-
-    const {
-        name,
-        email,
-        phone,
-        specialization,
-        password
-    } = req.body;
-
-    const { error } =
-    await supabase
-    .from("doctors")
-    .update({
-        name,
-        email,
-        phone,
-        specialization,
-        password
-    })
-    .eq("id", id);
-
-    if(error){
-
-        return res.status(400).json({
-            success:false,
-            message:error.message
-        });
-
-    }
-
-    res.json({
-        success:true,
-        message:"Profile Updated Successfully"
-    });
-
-});
-
 router.put(
 "/doctor-availability/:id",
 async (req,res)=>{
@@ -954,11 +893,11 @@ async (req,res)=>{
 
         const { error } =
         await supabase
-        .from("appointments")
-        .update({
-            consulted:"Yes"
-        })
-        .eq("id", id);
+.from("appointments")
+.update({
+    consulted: true
+})
+.eq("id", id);
 
         if(error){
 
@@ -980,6 +919,97 @@ async (req,res)=>{
         res.status(500).json({
             success:false,
             message:err.message
+        });
+
+    }
+
+});
+
+// ================= FORGOT PASSWORD =================
+
+router.put("/forgot-password", async (req, res) => {
+
+    try {
+
+        const {
+            email,
+            role,
+            newPassword
+        } = req.body;
+
+        let table = "";
+
+        if(role === "patient"){
+            table = "patients";
+        }
+        else if(role === "doctor"){
+            table = "doctors";
+        }
+        else if(role === "admin"){
+            table = "admins";
+        }
+        else{
+
+            return res.status(400).json({
+                success:false,
+                message:"Invalid Role"
+            });
+
+        }
+
+        // Check email exists
+
+        const { data, error } =
+        await supabase
+        .from(table)
+        .select("*")
+        .eq("email", email)
+        .single();
+
+        if(error || !data){
+
+            return res.status(404).json({
+                success:false,
+                message:"Email not found"
+            });
+
+        }
+
+        // Update Password
+
+        const { error:updateError } =
+        await supabase
+        .from(table)
+        .update({
+            password:newPassword
+        })
+        .eq("email", email);
+
+        if(updateError){
+
+            return res.status(400).json({
+                success:false,
+                message:updateError.message
+            });
+
+        }
+
+        res.json({
+
+            success:true,
+            message:"Password Updated Successfully"
+
+        });
+
+    }
+
+    catch(err){
+
+        res.status(500).json({
+
+            success:false,
+            message:err.message
+
         });
 
     }

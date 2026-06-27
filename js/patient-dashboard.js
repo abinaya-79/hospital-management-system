@@ -1,165 +1,46 @@
-console.log("Patient Dashboard Loaded");
-
 const patient =
 JSON.parse(localStorage.getItem("patient"));
 
-console.log(patient);
-
 if(patient){
 
-    document.querySelector(
-        ".welcome-section h1"
+    document.getElementById(
+        "patientWelcome"
     ).innerHTML =
     `Welcome ${patient.name} 👋`;
 
 }
-if(patient){
 
-    fetch(
-    `http://localhost:5000/api/auth/appointments/patient/${patient.name}`
-    )
+const messages = [
 
-    .then(res => res.json())
+"Your health is your greatest wealth. 💙",
 
-    .then(data => {
+"Every healthy choice matters. 🌱",
 
-        const box =
-        document.getElementById(
-            "appointmentStatus"
-        );
+"Stay positive, stay healthy, stay strong. ✨",
 
-        if(data.length === 0){
+"Taking care of yourself is always a good investment. ❤️",
 
-            box.innerHTML =
-            "No appointments booked yet.";
+"Your wellbeing is our priority. 🏥"
 
-            return;
-        }
+];
 
-        const appointment =
-        data[0];
+document.getElementById(
+    "dailyMessage"
+).innerText =
 
-        box.innerHTML = `
-
-            Doctor:
-            ${appointment.doctor_name}
-            <br><br>
-
-            Date:
-            ${appointment.appointment_date}
-            <br><br>
-
-            Time:
-            ${appointment.appointment_time}
-            <br><br>
-
-            Status:
-            <b>${appointment.status}</b>
-
-        `;
-
-    });
-
-}
-fetch(
-`http://localhost:5000/api/auth/prescriptions/patient/${patient.name}`
+messages[
+Math.floor(
+Math.random() * messages.length
 )
+];
 
-.then(res => res.json())
+document.getElementById(
+    "logoutBtn"
+).addEventListener("click",()=>{
 
-.then(data => {
+    localStorage.clear();
 
-    const box =
-    document.getElementById(
-        "prescriptionBox"
-    );
-
-    if(data.length === 0){
-
-        box.innerHTML =
-        "No prescriptions available.";
-
-        return;
-
-    }
-
-    let html = "";
-
-    data.forEach(p => {
-
-        html += `
-            Diagnosis:
-            ${p.diagnosis}
-            <br><br>
-
-            Medicines:
-            ${p.medicines}
-            <br><br>
-
-            Notes:
-            ${p.notes}
-            <hr><br>
-        `;
-
-    });
-
-    box.innerHTML = html;
-
-});
-
-fetch(
-`http://localhost:5000/api/auth/medical-history/${patient.name}`
-)
-
-.then(res => res.json())
-
-.then(data => {
-
-    const box =
-    document.getElementById(
-        "medicalHistoryBox"
-    );
-
-    if(data.length === 0){
-
-        box.innerHTML =
-        "No medical history found.";
-
-        return;
-
-    }
-
-    let html = "";
-
-    data.forEach(record => {
-
-        html += `
-
-            Date:
-            ${record.visit_date}
-            <br><br>
-
-            Doctor:
-            ${record.doctor_name}
-            <br><br>
-
-            Reason:
-            ${record.visit_reason}
-            <br><br>
-
-            Diagnosis:
-            ${record.diagnosis}
-            <br><br>
-
-            Prescription:
-            ${record.prescription}
-
-            <hr><br>
-
-        `;
-
-    });
-
-    box.innerHTML = html;
+    window.location.href =
+    "login.html";
 
 });

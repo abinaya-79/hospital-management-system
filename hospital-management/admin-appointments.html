@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Admin Appointments</title>
+
+<link rel="stylesheet"
+href="../css/admin-appointments.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>CARECONNECT</h2>
+
+        <ul>
+
+            <li onclick="window.location.href='admin-dashboard.html'">
+                Dashboard
+            </li>
+
+            <li onclick="window.location.href='doctor-management.html'">
+                Doctors
+            </li>
+
+            <li onclick="window.location.href='patient-management.html'">
+                Patients
+            </li>
+
+            <li class="active">
+                Appointments
+            </li>
+
+            <li id="logoutBtn">
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <div class="top-bar">
+
+            <div>
+
+                <h1>Appointments</h1>
+
+                <p>
+                    Monitor all appointments in CareConnect.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Patient</th>
+
+                        <th>Doctor</th>
+
+                        <th>Date</th>
+
+                        <th>Time</th>
+
+                        <th>Reason</th>
+
+                        <th>Status</th>
+
+                        <th>Consulted</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="appointmentTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/admin-appointments.js"></script>
+
+</body>
+
+</html>
