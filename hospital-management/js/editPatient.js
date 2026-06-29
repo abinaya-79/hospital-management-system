@@ -5,7 +5,7 @@ const patientId =
 params.get("id");
 
 fetch(
-`http://localhost:5000/api/auth/patients/${patientId}`
+`https://hospital-management-system-2jn3.onrender.com/api/auth/patients/${patientId}`
 )
 
 .then(res => res.json())
@@ -59,7 +59,7 @@ const updatedPatient = {
 
 const response = await fetch(
 
-    `http://localhost:5000/api/auth/patients/${patientId}`,
+    `https://hospital-management-system-2jn3.onrender.com/api/auth/patients/${patientId}`,
 
     {
         method:"PUT",

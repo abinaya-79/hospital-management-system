@@ -61,7 +61,7 @@ if (loginForm) {
         console.log("EMAIL:", email);
         console.log("PASSWORD:", password);
 
-        fetch("http://localhost:5000/api/auth/login", {
+        fetch("https://hospital-management-system-2jn3.onrender.com/api/auth/login", {
 
             method: "POST",
 
@@ -220,7 +220,7 @@ if (registerForm) {
 
         // Send Data to Backend
 
-        fetch("http://localhost:5000/api/auth/register", {
+        fetch("https://hospital-management-system-2jn3.onrender.com/api/auth/login", {
 
             method: "POST",
 

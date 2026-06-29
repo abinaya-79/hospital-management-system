@@ -4,7 +4,7 @@ localStorage.getItem(
 );
 
 fetch(
-`http://localhost:5000/api/auth/medical-history/${patientName}`
+`https://hospital-management-system-2jn3.onrender.com/api/auth/medical-history/${patientName}`
 )
 
 .then(res => res.json())

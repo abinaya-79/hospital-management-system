@@ -43,7 +43,7 @@ document
     const response =
     await fetch(
 
-        `http://localhost:5000/api/auth/doctor/${doctor.id}`,
+        `https://hospital-management-system-2jn3.onrender.com/api/auth/doctor/${doctor.id}`,
 
         {
 

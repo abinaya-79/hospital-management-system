@@ -21,7 +21,7 @@ if(admin){
 // ----------------------
 
 fetch(
-"http://localhost:5000/api/auth/doctors"
+"https://hospital-management-system-2jn3.onrender.com/api/auth/doctors"
 )
 
 .then(res => res.json())
@@ -39,7 +39,7 @@ fetch(
 // ----------------------
 
 fetch(
-"http://localhost:5000/api/auth/patients"
+"https://hospital-management-system-2jn3.onrender.com/api/auth/patients"
 )
 
 .then(res => res.json())
@@ -57,7 +57,7 @@ fetch(
 // ----------------------
 
 fetch(
-"http://localhost:5000/api/auth/appointments"
+"https://hospital-management-system-2jn3.onrender.com/api/auth/appointments"
 )
 
 .then(res => res.json())

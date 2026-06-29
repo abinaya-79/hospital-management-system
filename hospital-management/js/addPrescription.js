@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
     try {
 
         const response = await fetch(
-        "http://localhost:5000/api/auth/add-prescription",
+        "https://hospital-management-system-2jn3.onrender.com/api/auth/add-prescription",
         {
 
             method:"POST",
@@ -63,7 +63,7 @@ form.addEventListener("submit", async (e) => {
         if(data.success){
 
     await fetch(
-    "http://localhost:5000/api/auth/add-medical-history",
+    "https://hospital-management-system-2jn3.onrender.com/api/auth/add-medical-history",
     {
 
         method:"POST",
@@ -96,7 +96,7 @@ form.addEventListener("submit", async (e) => {
 
 await fetch(
 
-`http://localhost:5000/api/auth/update-consulted/${appointment.id}`,
+`https://hospital-management-system-2jn3.onrender.com/api/auth/update-consulted/${appointment.id}`,
 
 {
     method:"PUT"
@@ -114,7 +114,7 @@ await fetch(
 
 await fetch(
 
-`http://localhost:5000/api/auth/appointments/${appointment.id}`,
+`https://hospital-management-system-2jn3.onrender.com/api/auth/appointments/${appointment.id}`,
 
 {
     method:"PUT",

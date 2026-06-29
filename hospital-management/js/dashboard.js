@@ -151,7 +151,7 @@ if(viewPatientsBtn){
 const patientName =
 prompt("Enter Patient Name");
 fetch(
-"http://localhost:5000/api/auth/appointments/patient/sangavi"
+"https://hospital-management-system-2jn3.onrender.com/api/auth/appointments/patient/sangavi"
 )
 .then(res => res.json())
 .then(data => {

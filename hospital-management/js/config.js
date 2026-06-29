@@ -1,0 +1,1 @@
+const API_BASE_URL = "https://hospital-management-system-2jn3.onrender.com";

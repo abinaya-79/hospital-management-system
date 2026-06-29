@@ -6,7 +6,7 @@ localStorage.getItem("patient")
 );
 
 fetch(
-`http://localhost:5000/api/auth/patients/${patient.id}`
+`https://hospital-management-system-2jn3.onrender.com/api/auth/patients/${patient.id}`
 )
 
 .then(res => res.json())
@@ -52,7 +52,7 @@ async ()=>{
 
 const response =
 await fetch(
-`http://localhost:5000/api/auth/patients/${patient.id}`,
+`https://hospital-management-system-2jn3.onrender.com/api/auth/patients/${patient.id}`,
 {
 method:"PUT",
 
@@ -147,7 +147,7 @@ return;
 
 const response =
 await fetch(
-`http://localhost:5000/api/auth/patients/${patient.id}`,
+`https://hospital-management-system-2jn3.onrender.com/api/auth/patients/${patient.id}`,
 {
 method:"PUT",
 

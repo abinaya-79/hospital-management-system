@@ -1,7 +1,7 @@
 const patientTable =
 document.getElementById("patientTable");
 
-fetch("http://localhost:5000/api/auth/patients")
+fetch("https://hospital-management-system-2jn3.onrender.com/api/auth/patients")
 
 .then(res => res.json())
 
@@ -65,7 +65,7 @@ if(!confirmDelete){
 
 const response = await fetch(
 
-    `http://localhost:5000/api/auth/patients/${id}`,
+    `https://hospital-management-system-2jn3.onrender.com/api/auth/patients/${id}`,
 
     {
         method:"DELETE"

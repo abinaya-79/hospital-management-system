@@ -7,7 +7,7 @@ console.log("Patient Management Loaded");
 const patientTable =
 document.getElementById("patientTable");
 
-fetch("http://localhost:5000/api/auth/patients")
+fetch("https://hospital-management-system-2jn3.onrender.com/api/auth/login"
 
 .then(res => res.json())
 
@@ -110,7 +110,7 @@ async function deletePatient(id){
         const response =
         await fetch(
 
-        `http://localhost:5000/api/auth/patients/${id}`,
+        `https://hospital-management-system-2jn3.onrender.com/api/auth/patients/${id}`,
 
         {
 

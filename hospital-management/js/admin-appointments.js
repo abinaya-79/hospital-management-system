@@ -7,7 +7,7 @@ console.log("Admin Appointments Loaded");
 const appointmentTable =
 document.getElementById("appointmentTable");
 
-fetch("http://localhost:5000/api/auth/appointments")
+fetch("https://hospital-management-system-2jn3.onrender.com/api/auth/appointments")
 
 .then(res => res.json())
 

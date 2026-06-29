@@ -2,7 +2,7 @@ const params = new URLSearchParams(window.location.search);
 
 const doctorId = params.get("id");
 
-fetch(`http://localhost:5000/api/auth/doctors/${doctorId}`)
+fetch(`https://hospital-management-system-2jn3.onrender.com/api/auth/doctors/${doctorId}`)
 .then(res => res.json())
 .then(doctor => {
 
@@ -47,7 +47,7 @@ const updatedDoctor = {
 
 const response = await fetch(
 
-    `http://localhost:5000/api/auth/doctors/${doctorId}`,
+    `https://hospital-management-system-2jn3.onrender.com/api/auth/doctors/${doctorId}`,
 
     {
         method: "PUT",

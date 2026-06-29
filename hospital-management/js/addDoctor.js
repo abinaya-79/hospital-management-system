@@ -20,7 +20,7 @@ document
         document.getElementById("password").value;
 
     const response = await fetch(
-        "http://localhost:5000/api/auth/add-doctor",
+        "https://hospital-management-system-2jn3.onrender.com/api/auth/add-doctor",
         {
             method: "POST",
             headers: {

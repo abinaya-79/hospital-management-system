@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
     try {
 
         const response = await fetch(
-        "http://localhost:5000/api/auth/add-medical-history",
+        "https://hospital-management-system-2jn3.onrender.com/api/auth/add-medical-history",
         {
 
             method:"POST",

@@ -4,7 +4,7 @@ const doctor =
 JSON.parse(localStorage.getItem("doctor"));
 
 fetch(
-`http://localhost:5000/api/auth/appointments/doctor/${doctor.name}`
+`https://hospital-management-system-2jn3.onrender.com/api/auth/appointments/doctor/${doctor.name}`
 )
 
 .then(res => res.json())
@@ -147,7 +147,7 @@ async function updateStatus(id,status){
 
         const response = await fetch(
 
-        `http://localhost:5000/api/auth/appointments/${id}`,
+        `https://hospital-management-system-2jn3.onrender.com/api/auth/appointments/${id}`,
 
         {
 

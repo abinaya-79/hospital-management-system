@@ -7,7 +7,7 @@ console.log("Doctor Management Loaded");
 const doctorTable =
 document.getElementById("doctorTable");
 
-fetch("http://localhost:5000/api/auth/doctors")
+fetch("https://hospital-management-system-2jn3.onrender.com/api/auth/doctors")
 
 .then(res => res.json())
 
@@ -127,7 +127,7 @@ try{
 
 const response =
 await fetch(
-`http://localhost:5000/api/auth/doctors/${id}`,
+`https://hospital-management-system-2jn3.onrender.com/api/auth/doctors/${id}`,
 {
 method:"DELETE"
 }

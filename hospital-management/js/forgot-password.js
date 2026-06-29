@@ -47,9 +47,8 @@ document
 
     try{
 
-        const response = await fetch(
-            "http://localhost:5000/api/auth/forgot-password",
-            {
+        const response = await fetch("https://hospital-management-system-2jn3.onrender.com/api/auth/login", {
+            
                 method:"PUT",
 
                 headers:{

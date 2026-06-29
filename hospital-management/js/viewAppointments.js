@@ -9,7 +9,7 @@ async function loadAppointments(){
 appointmentTable.innerHTML = "";
 
 const response = await fetch(
-    "http://localhost:5000/api/auth/appointments"
+    "https://hospital-management-system-2jn3.onrender.com/api/auth/appointments"
 );
 
 const appointments =
@@ -83,7 +83,7 @@ async function updateStatus(id,status){
 
 const response = await fetch(
 
-    `http://localhost:5000/api/auth/appointments/${id}`,
+    `https://hospital-management-system-2jn3.onrender.com/api/auth/appointments/${id}`,
 
     {
         method:"PUT",
@@ -122,7 +122,7 @@ if(!confirmDelete){
 
 const response = await fetch(
 
-    `http://localhost:5000/api/auth/appointments/${id}`,
+    `https://hospital-management-system-2jn3.onrender.com/api/auth/appointments/${id}`,
 
     {
         method:"DELETE"
