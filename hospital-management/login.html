@@ -17,29 +17,35 @@
 
             <!-- Role Tabs -->
             <div class="role-tabs">
-                <button class="role-btn active" onclick="selectRole('patient', this)">
+
+                <button class="role-btn active"
+                onclick="selectRole('patient', this)">
                     Patient
                 </button>
 
-                <button class="role-btn" onclick="selectRole('doctor', this)">
+                <button class="role-btn"
+                onclick="selectRole('doctor', this)">
                     Doctor
                 </button>
 
-                <button class="role-btn" onclick="selectRole('admin', this)">
+                <button class="role-btn"
+                onclick="selectRole('admin', this)">
                     Admin
                 </button>
+
             </div>
 
             <form id="loginForm">
 
                 <input
-    type="email"
-    id="email"
-    placeholder="Enter Email"
-    required
->
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email"
+                    required
+                >
 
                 <div class="password-box">
+
                     <input
                         type="password"
                         id="password"
@@ -48,21 +54,39 @@
                     >
 
                     <span onclick="togglePassword()">👁</span>
+
                 </div>
 
-                <button type="submit" class="login-btn">
+                <div class="forgot">
+
+                    <a href="forgot-password.html">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="login-btn">
+
                     Login
+
                 </button>
 
             </form>
 
-            <p class="forgot">
-                Forgot Password?
-            </p>
-
             <p id="registerText">
+
                 Don't have an account?
-                <a href="register.html">Register</a>
+
+                <a href="register.html">
+
+                    Register
+
+                </a>
+
             </p>
 
         </div>

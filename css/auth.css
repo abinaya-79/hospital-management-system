@@ -161,3 +161,29 @@ select{
 .error{
     color:red;
 }
+
+.forgot{
+
+    text-align:right;
+
+    margin:10px 0 20px;
+
+}
+
+.forgot a{
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.forgot a:hover{
+
+    text-decoration:underline;
+
+}
